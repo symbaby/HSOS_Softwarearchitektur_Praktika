@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PizzaAll</title>
+    <!-- src: https://getbootstrap.com/docs/5.0/getting-started/introduction/ !-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Pizza Number</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        {#for pizza in PizzaAll}
+            <tr>
+            <td>{pizza.pizzaId}</td>
+            <td>{pizza.name}</td>
+            <td>{pizza.price} €</td>
+            <td><button type="button" class="btn btn-info" onclick="window.location.href='/ui/pizza/details/{pizza.pizzaId}';">
+                Details
+            </button></td>
+            </tr>
+        {/for}
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

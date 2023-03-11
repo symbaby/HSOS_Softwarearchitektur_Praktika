@@ -1,0 +1,17 @@
+alter table if exists Customer_Ordering drop constraint if exists FKo4q3f0osufnvkfhxp229q2p2j;
+alter table if exists Customer_Ordering drop constraint if exists FK1h41v8e1d0ejnmdf63oo5el5e;
+alter table if exists Ordering_OrderPosition drop constraint if exists FKn2uqwik385lt4hyig44xky0p8;
+alter table if exists Ordering_OrderPosition drop constraint if exists FK84un56apqvfhlvnocjl7qj9pd;
+alter table if exists OrderPosition drop constraint if exists FKtektgup8e8rcvrlcd1f1hw4ie;
+drop table if exists Customer cascade;
+drop table if exists Customer_Ordering cascade;
+drop table if exists Ordering cascade;
+drop table if exists Ordering_OrderPosition cascade;
+drop table if exists OrderPosition cascade;
+drop table if exists Pizza cascade;
+drop table if exists UserLogin cascade;
+drop sequence if exists customerNumber_id_sequence;
+drop sequence if exists hibernate_sequence;
+drop sequence if exists orderingNumber_id_sequence;
+drop sequence if exists orderPositionNumber_id_sequence;
+drop sequence if exists pizzaNumber_id_sequence;
